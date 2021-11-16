@@ -1,0 +1,23 @@
+<div class="list"
+     id="listWraper-{{data.listId}}">
+    <div class="d-flex justify-content-between p-1">
+        <h6>{{data.name}}  </h6>
+        <i class="material-icons button" (click)="onRemoveList()">delete</i>
+    </div>
+    <div class="taskItems"
+         [id]="data.listId"
+         [sortablejs]="data.tasks"
+         [sortablejsOptions]="sortableOptions">
+        <div *ngFor="let taskItem of data.tasks" [id]="taskItem.taskId">
+            <task-item [data]="taskItem"></task-item>
+        </div>
+    </div>
+    <div class="addTask">
+        <input type="text"
+               [(ngModel)]="newTaskName"
+               placeholder="Add task"
+               (keyup.enter)="onSaveNewTask()">
+        <i class="material-icons button"
+ (click)="onSaveNewTask()">add</i>
+    </div>
+</div>

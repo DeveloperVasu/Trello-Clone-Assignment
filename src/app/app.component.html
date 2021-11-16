@@ -1,0 +1,55 @@
+<header class="d-flex justify-content-between">
+    <div class="d-flex justify-content-between">
+        <button class="nav-item">
+            <div href="#" role="button" aria-expanded="false">
+              Home
+            </div>
+          </button>
+          <button class="nav-item">
+            <div href="#" role="button" aria-expanded="false">
+              Tour
+            </div>
+          </button>
+          <button class="nav-item">
+            <div href="#" role="button" aria-expanded="false">
+              Blog
+            </div>
+          </button>
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+        <img src="./../assets/img/logo.gif" alt="logo" class="logo">
+    </div>
+    <div class="d-flex justify-content-between">
+        <button class="nav-item" style="background-color: #5eb54a; padding: 0 12px;">
+            <div href="#" role="button" aria-expanded="false" >
+              Sign up
+            </div>
+          </button>
+          <button class="nav-item" style="background-color: #4791bd; padding: 0 12px;">
+            <div href="#" role="button" aria-expanded="false">
+              Log in
+            </div>
+          </button>
+    </div>
+</header>
+
+<header class="addList">
+    <input type="text"
+           [(ngModel)]="addListText"
+           (keyup.enter)="onSaveNewList()"
+           >
+</header>
+<div class="board-header">
+  
+  <div class="board-name">
+    <h1>Kanban Board</h1>
+  </div>
+</div>
+<section>
+    <div class="lists"
+         [sortablejs]="lists">
+        <list [data]="list"
+              *ngFor="let list of lists"></list>
+    </div>
+    <!-- <pre>{{lists | json}}</pre> -->
+</section>

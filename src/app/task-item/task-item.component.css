@@ -1,0 +1,76 @@
+.taskItem {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+    border-right-style:solid;
+    border-right-color:white;
+    border-right-width: 6px;
+    padding-right: 0.3em;
+    margin: 5px 0;
+    background: white;
+}
+.taskActions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    opacity: 0;
+    transition: all 250ms ease-in;
+}
+.taskItem:hover .taskActions {
+    opacity: 1;
+}
+.taskActions * {
+    font-size: 22px;
+    transition: transform 150ms ease-in;
+}
+.taskActions > *:hover {
+    transform: scale(1.4);
+    /* transition-duration: 300ms; */
+}
+.taskActions > *{
+    
+    margin-left: 0.5em;
+    color:#444;
+}
+label {
+    position: relative;
+    top:3px;
+}
+.markCompleted {
+    display: none;
+}
+
+.completed  {
+    opacity: 0.6;
+    color: grey;
+    text-decoration: line-through;
+}
+
+.editText {
+    flex-shrink: 1;
+    border:none;
+    background: transparent;
+    /* font-style: italic; */
+    padding: 0.2em;
+}
+
+.line {
+    border-radius: 10px;
+    float: left;
+    font-size: 12px;
+    font-weight: 700;
+    height: 8px;
+    line-height: 100px;
+    margin: 0 4px 4px 0;
+    max-width: 40px;
+    min-width: 40px;
+    padding: 0;
+    text-shadow: none;
+    width: auto;
+}
+
+a:hover{
+    background-color: aqua;
+}
